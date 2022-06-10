@@ -14,5 +14,8 @@
     <label for="password">Contraseña</label>
     <input type="password" name="pass"><br><br>
     <label for="rol">Rol</label>
-    <input type="hidden" name="rol" value="user">
+    <input type="text" name="rol" value="user">
+    <label for="saldo">Saldo</label>
+    <input type="float" name="saldo" value="saldo">
+    <input type="submit" value="Registrar">
 </form>
