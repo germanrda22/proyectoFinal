@@ -23,6 +23,6 @@ CREATE TABLE movimientos
     fecha       DATE NOT NULL,
     concepto    VARCHAR(255),
     CONSTRAINT pk_movimientos PRIMARY KEY(id),
-    CONSTRAINT fk_dni_usuario FOREIGN KEY(dni_usuario) REFERENCES usuario(dni)
+    CONSTRAINT fk_dni_usuario FOREIGN KEY(dni_usuario) REFERENCES usuario(dni) ON DELETE CASCADE
 )
 ENGINE=InnoDb;
