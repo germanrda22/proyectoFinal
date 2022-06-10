@@ -26,3 +26,11 @@ CREATE TABLE movimientos
     CONSTRAINT fk_dni_usuario FOREIGN KEY(dni_usuario) REFERENCES usuario(dni) ON DELETE CASCADE
 )
 ENGINE=InnoDb;
+
+INSERT INTO 'usuario' ('dni', 'nombre', 'apellidos', 'telefono', 'email', 'password', 'rol', 'saldo') 
+VALUES  ('78224235Q', 'Germán', 'Ruiz del Arco', '637628727', 'admin@gmail.com', 'admin', 'admin', NULL), 
+        ('23804454F', 'Javier', 'Rodriguez Gallegos', '678457585', 'javi@gmail.com', 'javi', 'usuario', '250849')
+
+INSERT INTO 'movimientos' ('id', 'dni_usuario', 'cantidad', 'fecha', 'concepto') 
+VALUES  (NULL, '23804454F', '+50', '2022-06-10', 'Cobro dietas y desplazamiento'), 
+        (NULL, '23804454F', '-200', '2022-06-09', 'Luz y agua')
