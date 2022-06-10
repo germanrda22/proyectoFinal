@@ -2,6 +2,7 @@
 
     namespace Controllers;
     use Repository\UsuarioRepository;
+    use Lib\View;
 
     class UsuarioController
     {

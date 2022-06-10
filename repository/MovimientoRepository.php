@@ -2,7 +2,7 @@
     namespace Repository;
 
     use Models\Movimiento;
-    use Config\Database;
+    use Lib\Database;
     use PDO;
 
     class MovimientoRepository extends Movimiento{
