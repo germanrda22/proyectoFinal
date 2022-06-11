@@ -9,14 +9,13 @@
             <input type="submit" value="Enviar">
             <br>
         </form>
-    <?php endif; ?>
-
-    <?php 
+    <?php else:
         if(isset($_SESSION['admin']))
         {
-            require_once 'views/admin';
+            require_once 'views/admin/homeAdmin.php';
         }else{
-            require_once 'views/usuario';
+            require_once 'views/usuario/homeUsuario.php';
         }
     ?>
+    <?php endif; ?>
 </div>
