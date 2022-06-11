@@ -7,6 +7,7 @@
 
     class UsuarioRepository extends Usuario
     {
+        private $db;
         public function __construct()
         {
             $this->db = new Database();
@@ -30,27 +31,6 @@
                     $result = $datos;
                 }
             }
-            return $result;
-        }
-
-        public function save()
-        {
-            $sql = "INSERT INTO usuarios VALUES(NULL,:nombre, :apellidos, :email, :password, 'user', NULL)";
-            $ins = $this->db->prepare($sql);
-            $nom = $this->getNombre();
-            $apell = $this->getApellidos();
-            $mail = $this->getEmail();
-            $password = password_hash($this->getPassword(), PASSWORD_BCRYPT, ['cost' => 4]);
-            $ins->bindParam(':nombre', $nom, PDO::PARAM_STR);
-            $ins->bindParam(':apellidos',$apell, PDO::PARAM_STR);
-            $ins->bindParam(':email',$mail, PDO::PARAM_STR);
-            $ins->bindParam(':password',$password, PDO::PARAM_STR);
-            $ins->execute();
-            $result = false;
-            if($ins){
-                $result = true;
-            }
-            $db = null;
             return $result;
         }
     }

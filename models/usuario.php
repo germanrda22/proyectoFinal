@@ -11,7 +11,6 @@
         private $password;
         private $rol;
         private $dinero;
-        private $db;
 
 
         public function getDni()

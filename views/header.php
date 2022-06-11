@@ -10,9 +10,6 @@
 <body>
     <header id="header">
         <div id="logo">
-            <img src="<?=base_url?>assets/img/banco.jpeg" alt="banco" />
-            <a href="<?=base_url?>">
-                Banco
-            </a>	
+            <img src="<?=base_url?>assets/img/banco.jpg" alt="banco" />	
         </div>	
 	</header>
